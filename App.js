@@ -2,16 +2,12 @@ import React, { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-
-
-
-
 export default function App() {
 
 const [itemCount, setItemCount] = useState(2);
 const [items, setItems] = useState({
   1: 'first item',
-  2: 'second item',
+  // 2: 'second item',
 });
 
 function ListItem() {
@@ -23,6 +19,15 @@ function ListItem() {
   );
 
 }
+
+const itemsArray = Object.entries(items);
+
+  // return (
+  //   <View style={styles.container}>
+  //       <ScrollView>
+  //         {
+            
+          // }
 // function createListItem(listItem) {
 //   return <ListItem />;
 // }
@@ -58,7 +63,19 @@ function MyCheckbox() {
       <Text style={styles.appTitle}>Todo List</Text>
       {/* {items.map(createListItem)} */}
 
-      <ListItem />
+      {/* <ListItem /> */}
+      {itemsArray.map((items) => {
+              return (
+                <View className="listItem" style={styles.checkboxContainer}>
+                <MyCheckbox className="checkBox"/>
+                <Text style={styles.checkboxLabel}>{items[1]}</Text>
+              </View>
+                // <View key={item[0]} id={item[0]}>
+                //   <Text>{item[1]}</Text>
+                // </View>
+              );
+            })
+          }
 
     </View>
   );
