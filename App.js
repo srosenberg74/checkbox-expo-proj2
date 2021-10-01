@@ -23,8 +23,14 @@ function ListItem() {
   );
 
 }
+// function createListItem(listItem) {
+//   return <ListItem />;
+// }
 
-const 
+function showListItem() {
+  return <ListItem />;
+}
+
 
 function MyCheckbox() {
   const [checked, onChange] = useState(false);
@@ -50,8 +56,9 @@ function MyCheckbox() {
   return (
     <View style={styles.appContainer}>
       <Text style={styles.appTitle}>Todo List</Text>
-      <ListItem />
+      {/* {items.map(createListItem)} */}
 
+      <ListItem />
 
     </View>
   );
