@@ -22,12 +22,6 @@ function ListItem() {
 
 const itemsArray = Object.entries(items);
 
-  // return (
-  //   <View style={styles.container}>
-  //       <ScrollView>
-  //         {
-            
-          // }
 // function createListItem(listItem) {
 //   return <ListItem />;
 // }
@@ -46,7 +40,7 @@ function MyCheckbox() {
     onChange(!checked);
     // onChange(delete);
     // delete document.getElementsByClassName('listItem');
-    delete document.querySelectorAll('View.listItem')[0];
+    // delete document.querySelectorAll('View.listItem')[0];
   }
 
   return (
@@ -70,9 +64,6 @@ function MyCheckbox() {
                 <MyCheckbox className="checkBox"/>
                 <Text style={styles.checkboxLabel}>{items[1]}</Text>
               </View>
-                // <View key={item[0]} id={item[0]}>
-                //   <Text>{item[1]}</Text>
-                // </View>
               );
             })
           }
@@ -114,7 +105,7 @@ const styles = StyleSheet.create({
     width: 400,
     height: 60,
     border: '2px solid red',
-    padding: 10,
+    padding: 20,
     borderRadius: 10,
   },
 
